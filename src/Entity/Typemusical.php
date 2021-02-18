@@ -45,5 +45,10 @@ class Typemusical
         return $this;
     }
 
+    public function __toString()
+    {
+        return $this->getLibellemusique();
+    }
+
 
 }

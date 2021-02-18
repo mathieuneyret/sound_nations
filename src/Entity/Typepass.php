@@ -28,6 +28,11 @@ class Typepass
      */
     private $libellepass;
 
+    /**
+     * @ORM\Column(type="float")
+     */
+    private $price;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +49,22 @@ class Typepass
 
         return $this;
     }
-
-
+    
+    public function getPrice(): ?float
+    {
+        return $this->price;
+    }
+    
+    public function setPrice(float $price): self
+    {
+        $this->price = $price;
+        
+        return $this;
+    }
+    
+    public function __toString()
+    {
+        return $this->getLibellepass();
+    }
+    
 }

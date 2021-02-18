@@ -45,5 +45,9 @@ class Typemembre
         return $this;
     }
 
+    public function __toString()
+    {
+        return $this->getLibelleposte();
+    }
 
 }

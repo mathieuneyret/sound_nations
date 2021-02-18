@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\Partenaire;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class PartenaireCrudController extends AbstractCrudController
 {
@@ -12,14 +14,12 @@ class PartenaireCrudController extends AbstractCrudController
         return Partenaire::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('libellepartenaire'),
+            AssociationField::new('idcategorie')
         ];
     }
-    */
+    
 }

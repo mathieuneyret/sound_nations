@@ -4,6 +4,9 @@ namespace App\Controller\Admin;
 
 use App\Entity\Billeterie;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IntegerField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 
 class BilleterieCrudController extends AbstractCrudController
 {
@@ -12,14 +15,14 @@ class BilleterieCrudController extends AbstractCrudController
         return Billeterie::class;
     }
 
-    /*
+    
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            AssociationField::new('idpass'),
+            AssociationField::new('iduser'),
+            DateTimeField::new('dateachat'),
         ];
     }
-    */
+    
 }

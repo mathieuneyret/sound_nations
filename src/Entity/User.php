@@ -201,4 +201,12 @@ class User
     }
 
 
+    public function __toString()
+    {
+        return $this->getNom(). ' ' .$this->getPrenom();
+        /*return $this->getNom(). ' ' .$this->getPrenom(). ' ' .$this->getAdresse(). ' ' .$this->getAdressemail(). ' ' .$this->getPassword();*/
+        
+    }
+    
+
 }
