@@ -50,7 +50,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Type membre', 'fas fa-user-tag',Typemembre::class);
         yield MenuItem::linkToCrud('Type musical', 'fas fa-music', Typemusical::class);
         yield MenuItem::linkToCrud('Type pass', 'fas fa-clone', Typepass::class);
-        yield MenuItem::linkToCrud('User', 'fas fa-id-card', User::class);
+        yield MenuItem::linkToCrud('Utilisateur', 'fas fa-id-card', User::class);
         // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }
 }
